@@ -112,12 +112,13 @@ Actions currently support the following:
 
 As a user of the game you can run the following commands:
 
-- `look` - View the room along with it's objects and exits
-- `look object` - View the provided item and it's actions
+- `look` - View the room along with its objects and exits
+- `look object` - View the provided item and its actions
 - `grab object` - Add the provided item to the inventory
 - `drop object` - Remove the provided item from the inventory
 - `inventory` - List the inventory
 - `go direction` - Go the provided direction (north,south,east,west)
 - `teleport x y` - Go to the provided coordinates
 - `quit` - Quit ~world
+- `help` - Shows a basic help message
 - `action object` - Runs the provided action on the provided object

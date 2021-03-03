@@ -475,6 +475,21 @@ def objCmd(cmd):
     if not found:
         prnt('Command not found')
 
+def showHelp():
+    # help text comes from the README
+    prnt([
+        'Available commands:',
+        '- `look` - View the room along with its objects and exits',
+        '- `look object` - View the provided item and its actions',
+        '- `grab object` - Add the provided item to the inventory',
+        '- `drop object` - Remove the provided item from the inventory',
+        '- `inventory` - List the inventory',
+        '- `go direction` - Go the provided direction (north,south,east,west)',
+        '- `teleport x y` - Go to the provided coordinates',
+        '- `quit` - Quit ~world',
+        '- `help` - Shows a basic help message',
+        '- `action object` - Runs the provided action on the provided object'
+    ])
 
 if not os.path.exists(configPath):
     print('')
@@ -554,6 +569,8 @@ while active == True:
     elif cmd.startswith('teleport'): teleport(cmd) 
     # CMD: quit
     elif cmd == 'quit' or cmd == 'exit': active = False
+    # CMD: help
+    elif cmd == 'help' or cmd == 'h' or cmd == '?': showHelp()
     # CMD: obj commands
     else: objCmd(cmd)
 
